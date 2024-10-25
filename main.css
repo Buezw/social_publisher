@@ -1,0 +1,43 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333; /* Fallback background */
+  }
+  body {
+    background-image: url('your-background-image-url.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Georgia', serif;
+    color: white;
+  }
+  .container {
+    width: 75%; /* Adjusted for 4x3 aspect ratio */
+    max-width: 1000px;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Changes here */
+    align-items: center;
+    padding-top: 40%; /* Additional padding at the top */
+  }
+  .text {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 28px;
+    line-height: 1.6;
+    text-align: center;
+  }
+  .citation {
+    font-size: 28px;
+    font-style: italic;
+    width: 100%;
+    text-align: center; /* Centering the citation text */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 62%; /* Ensure it stays at the bottom */
+  }
