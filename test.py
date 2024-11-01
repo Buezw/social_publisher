@@ -4,12 +4,12 @@ import re
 import os
 
 # 文件路径，用于保存会话状态
-session_file = "session.json"
+session_file = r"session.json"
 user_input = input("标题和书名，用空格分隔：")
 title_text, book_name = user_input.split()
 
 # 打开并读取 HTML 文件内容
-with open('social_graph.html', 'r', encoding='utf-8') as file:
+with open(r'social_graph.html', 'r', encoding='utf-8') as file:
     html_content = file.read()
 
 # 使用变量替换 HTML 中的内容
@@ -61,8 +61,8 @@ def load_session():
         page.locator(file_input_xpath).click()
         upload_address = 'xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div[2]/div[1]/div/input'
         page.locator(upload_address).set_input_files("output.png")
-        page.locator('xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div[1]/div[4]/div[1]/div/input').fill(book_name)
-        tag_input = 'xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div[1]/div[5]/p'
+        page.locator('xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div[4]/div[1]/div/input').fill(book_name)
+        tag_input = 'xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div[5]/p'
         tag_clicker = 'xpath=/html/body/div[1]/div/div[2]/div/div[2]/main/div[3]/div/div/div[1]/div/div/div/div/div[1]/div[1]/div[1]/div[5]/div[4]/div/div[1]/ul/li[1]'
         # for i in tag:
         #     page.locator(tag_input).fill(i)
